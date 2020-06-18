@@ -1,0 +1,166 @@
+a{text-decoration: none;}
+input[type="checkbox"]{display: none;}
+body *{font-size: 24px;}
+/* body{overflow-y: hidden;} */
+div.shortcut a, div.value div.wrap ul li span, div.story div.wrap, div.menu ul li div ol li a, div.reserveText p{font-family: 'Noto Sans KR'; font-weight: 500;}
+div.main div.wrap, div.value div.wrap h2, div.value div.wrap ul li p, div.main div.scroll-down span{font-family: 'Spartan';}
+header nav ul li a, div.menu ul li div h3, div.reserveText h2, div.footer div.wrap div.footer_Top ul li h3 a{font-family: "Santana-Black";}
+u{font-family: "Santana-Bold";}
+/* font */
+
+div.shortcut a::before{position: absolute; width: 55px; height: 55px; content: ''; opacity: 0.5; background-color: black; text-indent: -9999px; border-radius: 50%; transition: 0.5s;} 
+div.shortcut a{font-size: 20px; color: black; line-height: 55px; width: 100%;} 
+div.shortcut:hover a::before{width: 300px; border-radius: 55px; transition: 0.5s;}
+
+div.story div.wrap div.shortcut a, div.reserve div.container div.shortcut a, div.footer div.wrap div.shortcut a{color: white;}
+div.story div.wrap div.shortcut a::before, div.reserve div.container div.shortcut a::before, div.footer div.wrap div.shortcut a::before{background-color: white;}
+/* shortcut */
+
+#fp-nav ul{padding-right: 50px;}
+#fp-nav ul li a.active span:last-of-type{background-color: #e60012; transition: 0.5s;}
+#fp-nav ul li span:last-of-type{background-color: white;}
+#fp-nav ul li span:last-of-type.active{background-color: black; transition: 0.5s;}
+#fp-nav ul li{margin-bottom: 30px; transition: 0.5s;}
+#fp-nav ul li.active{margin-bottom: 15px; transition: 0.5s;}
+
+#fp-nav ul li .fp-tooltip.fp-right{background-color: white; color: black; font-weight: 600; font-size: 12px; width: 70px; height: 30px; border-radius: 15px; line-height: 30px; text-align: center; top: -6px;}
+#fp-nav ul li .fp-tooltip.fp-right.active{background-color: black; color: white;}
+/* fullpage navigation css */
+
+header{position: fixed; padding: 0 10%; width: 100%; top: 50px; z-index: 9999; display: flex; justify-content: space-between; align-items: center;}
+header h1 a img{width: 100px;}
+header nav ul{display: flex;}
+header nav ul li:not(:first-of-type){margin-left: 80px;}
+header nav ul li a.active, header nav ul li:hover a{color: #e60012;}
+header nav ul li a{font-size: 20px; color: white;}
+header nav ul li a.silde2{color: black;}
+div.wrap{padding: 0 10%;}
+
+div.main{background: url(../images/headerbg.png) no-repeat left top / cover;}
+div.main div.wrap{color: white; font-weight: 900;}
+div.main div.wrap p{margin-bottom: 50px;}
+div.main div.wrap h2{font-size: 60px; line-height: 90px;}
+div.main div.scroll-down{width: 80px; position: absolute; bottom: 50px; left: calc(50% - 40px); color: white; text-align: center;}
+div.main div.scroll-down span{display: block; width: 100%; font-weight: 900; font-size: 18px; opacity: 0.7;}
+div.main div.scroll-down i{animation-name: scrollDown; animation-duration: 1s; animation-iteration-count: infinite; animation-direction: alternate;}
+@keyframes scrollDown{
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+div.value div.wrap{display: flex; align-items: center;}
+div.value div.wrap > div{width: 50%;}
+div.value div.wrap h2{font-size: 60px; line-height: 90px; font-weight: 900; margin-bottom: 35px;} /*margin-bottom : 50px으로 통일*/
+div.value div.wrap div.right{text-align: center;}
+div.value div.wrap ul li{margin-bottom: 30px;}
+div.value div.wrap ul li:nth-of-type(2n){padding-left: 200px;}
+div.value div.wrap ul li p{font-weight: 900;}
+div.value div.wrap ul li p::first-letter{font-size: 60px; color: #067655;}
+div.value div.wrap ul li span{text-align: right;}
+
+div.story div.swiper-slide{width: 100%;}
+div.story div.wrap{width: 50%; color: white; text-align: center; height: 100%; flex-direction: column; display: flex; align-items: center; justify-content: center;}
+div.story div.wrap img{margin-bottom: 100px;}
+div.story div.wrap h3{font-size: 30px; margin-bottom: 50px; line-height: 50px; font-weight: 500;}
+div.story div.wrap p{width: 65%; line-height: 40px; margin-bottom: 50px;}
+div.story div.slide2 div.wrap{width: 40%; margin-left: auto;}
+div.story div.slide2 div.wrap h3{width: 100%;}
+div.story div.slide2 div.wrap p{width: 80%;}
+div.story div.slide2 div.wrap p span{color: #067655; font-weight: bolder;}
+
+.slide1{height: 100vh; background: url(../images/silderbg02.png) no-repeat left top; background-size: cover;}
+.slide2{height: 100vh; background: url(../images/silderbg01.png) no-repeat left top; background-size: cover;}
+/* story swiper */
+
+/* div.menu{background-color: black;} */
+div.menu ul{display: flex;}
+div.menu ul > li{width: 25%; display: flex; flex: 1; transition: 0.5s;}
+div.menu ul > li:hover{flex: 1 1 25%;}
+div.menu ul li img{width: 50%;}
+
+div.menu ul li div{visibility: hidden;}
+div.menu ul li:hover div{width: 50%; visibility: visible; transition: 0.5s;}
+
+
+/* div.menu ul li:first-of-type img{clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);}
+div.menu ul li:not(:first-of-type) img{clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);} */
+div.menu ul li div{z-index: 999; text-align: center; background-color: pink}
+div.menu ul li div h3{font-size: 40px; margin-bottom: 50px;}
+div.menu ul li div ol li a{color: black;}
+div.menu ul li div ol li{margin-bottom: 30px;}
+
+/* menu fin */
+div.reserve{background: url(../images/reservebg.png) no-repeat left top / cover;}
+
+div.reserve div.reserveText{opacity: 0; width: 573px; height: 573px; background-color: #020202; text-align: center; color: white;}
+div.reserve div.reserveText h2{font-size: 30px; margin-bottom: 50px; color: #c68c2b;}
+div.reserve div.reserveText p{margin: 0 auto 50px auto; font-size: 16px; line-height: 24px; width: 450px;}
+div.reserve div.reserveText p:nth-of-type(1){margin: 0 auto 30px auto; font-size: 24px;}
+div.reserve div.reserveText div.shortcut a{color: white;}
+div.reserve div.reserveText div.shortcut strong{background-color: white;}
+div.reserve div.container.active div.reserveText{opacity: 1; transition-duration: 0.5s; transition-delay: 2s;}
+div.reserve div.container{perspective: 2000px; width: 573px; margin: 0 auto;}
+div.reserve div.container > div{transform-style: preserve-3d;}
+div.reserve div.container div.middle{position: relative;}
+div.reserve div.container div.middle div{width: 191px; height: 191px; background-color: #020202; position: absolute; left: 191px; top: 191px;}
+div.reserve div.container div.middle div.centerCenter{z-index: 1; background-color: #020202; animation-name: shockwave; animation-duration: 1s; animation-iteration-count: infinite; animation-timing-function: ease-out;}
+div.reserve div.container.active div.middle div.centerCenter img{visibility: hidden; transition: 0.5s; transition-timing-function: ease-out;}
+div.reserve div.container div.middle div.top{transform-origin: top; transition: 0.5s; transition-timing-function: ease-out;} 
+div.reserve div.container.active div.middle div.top{transform: rotateX(-180deg); transition-timing-function: ease-out;}
+div.reserve div.container div.middle div.bottom{transform-origin: bottom; transition: 0.5s; transition-delay: 0.5s; transition-timing-function: ease-out;}
+div.reserve div.container.active div.middle div.bottom{transform: rotateX(180deg);}
+
+div.reserve div.container div.left{width: 191px; height: 573px; visibility: hidden; background-color: #020202; position: absolute; top: 0px; left: 191px; transform-origin: left; transition: 0.5s; transition-delay: 1s; transition-timing-function: ease-out;}
+div.reserve div.container.active div.left{transform: rotateY(-180deg); visibility: visible; transition-timing-function: ease-out;}
+/* 왼쪽열기 */
+div.reserve div.container div.right{width: 191px; height: 573px; visibility: hidden; background-color: #020202; position: absolute; top: 0px; left: 191px; transform-origin: right; transition: 0.5s; transition-delay: 1.5s; transition-timing-function: ease-out;}
+div.reserve div.container.active div.right{transform: rotateY(180deg); visibility: visible; transition-timing-function: ease-out;}
+/* 오른쪽열기 */
+
+/* @keyframes shockwave {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 2px rgba(0,0,0,0.15), inset 0 0 1px rgba(0,0,0,0.15);
+    }
+    90% {
+      box-shadow: 0 0 50px rgba(0,0,0,0), inset 0 0 30px rgba(0,0,0,0);
+    }
+    100% {
+      transform: scale(1.25);
+  
+    } */
+
+div.footer{background-color: #020202;}
+div.footer a{color: white;}
+div.footer div.wrap{padding: 10% 10% 0 10%;}
+div.footer div.wrap > div{display: flex; color: white;}
+div.footer div.wrap > div > div{width: 50%;}
+div.footer div.wrap div.footer_Top div.footer_left ul > li{margin-bottom: 50px; position: relative;}
+div.footer div.wrap div.footer_Top div.footer_left ul > li:last-of-type{margin-bottom: 0;}
+div.footer div.wrap div.footer_Top div.footer_left ul li span{opacity: 0; transition: 0.5s; width: 10px; height: 10px; text-indent: -9999px; border-radius: 100%; position: absolute; left: -25px; top: 10px; background-color: #e60012;}
+div.footer div.wrap div.footer_Top div.footer_left ul li span.active,
+div.footer div.wrap div.footer_Top div.footer_left ul li:hover span{opacity: 1; transition: 0.5s;}
+div.footer div.wrap div.footer_Top div.footer_left ul li h3 a{font-size: 30px;}
+div.footer div.wrap div.footer_Top div.footer_left{position: relative;}
+div.footer div.wrap div.footer_Top ol{position: absolute; left: 250px; top: 0;}
+div.footer div.wrap div.footer_Top ol > li:nth-of-type(2){position: absolute; top: 0;}
+div.footer div.wrap div.footer_Top ol > li{visibility: hidden; opacity: 0; transition: 0.3s;}
+div.footer div.wrap div.footer_Top ol > li.active{visibility: visible; opacity: 1; transition: 0.5s;}
+div.footer div.wrap div.footer_Top ol li ul li a{color: #888;}
+div.footer div.wrap div.footer_Top ol li ul li:hover a{color: white;}
+div.footer div.wrap div.footer_Top ol li ul li:not(:last-of-type){margin-bottom: 20px;}
+div.footer div.wrap div.footer_Top div.footer_right div{height: 100%; display: flex; flex-direction:column; justify-content: space-around;}
+div.footer hr{margin: 100px 0;}
+div.footer div.wrap div.footer_bottom div.footer_left ul{display: flex; margin-bottom: 50px;}
+div.footer div.wrap div.footer_bottom div.footer_left ul li:not(:last-of-type){border-right: 1px solid white; padding-right: 30px;}
+div.footer div.wrap div.footer_bottom div.footer_left ul li:not(:first-of-type){padding-left: 30px;}
+
+div.footer div.wrap div.footer_bottom div.footer_left ul li > a{font-size: 18px; color: #888; transition: 0.5s;}
+div.footer div.wrap div.footer_bottom div.footer_left ul li:hover a{color: white; transition: 0.5s;}
+div.footer div.wrap div.footer_bottom p{font-size: 18px; margin-bottom: 15px; color: #888}
+div.footer div.wrap div.footer_bottom div.footer_right{text-align: right; display: flex; flex-direction:column; justify-content: flex-end;}
+div.footer div.wrap i{position: absolute; right: 10%; top: 20%; color: white; cursor: pointer;}
